@@ -1,0 +1,34 @@
+<div class="container">
+
+  <div class="col-md-8 offset-md-2">
+    <br>
+    <h1>Contact me</h1>
+
+
+
+    <form  (ngSubmit)="onSubmit(contact)" #contact="ngForm">
+        
+      
+        <div class="form-group">
+        <label for="email">Email address</label>
+        <input #email=ngModel [(ngModel)]="contact.email" name="email" required type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+        <small *ngIf="email.touched && !email.valid" class="form-text text-muted alert alert-danger">Email is required</small>
+      </div>
+      <div class="form-group">
+        <label for="Subject">Your Subject</label>
+        <input [(ngModel)]="contact.subject" name="subject" type="text" class="form-control" id="Subject" aria-describedby="Subject" placeholder="type your Subject">
+        <small id="emailHelp" class="form-text text-muted">type hear your subject</small>
+      </div>
+      <div class="form-group">
+        <label for="message">Type your Message</label>
+        <textarea #message=ngModel ngModel [(ngModel)]="contact.message" name="message" #message=ngModel required class="form-control" id="message" rows="3"></textarea>
+        <small *ngIf="message.touched && !message.valid" class="form-text text-muted alert alert-danger">Message is required</small>
+      </div>
+      <re-captcha (resolved)="resolved($event)" siteKey="6LdPBZIUAAAAAP8vPtcD33GyVXzVTsqOl99q5HFU"></re-captcha>
+
+      <br>
+      <button type="submit" id="submit" [disabled]=!captcha class="btn btn-info form-control">Send Message</button>
+    </form>
+  </div>
+  <br><br><br><br><br><br>
+</div>
