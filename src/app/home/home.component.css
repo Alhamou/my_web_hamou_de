@@ -7,7 +7,7 @@ a:hover{
     text-decoration: none;
 }
 nav.home_nav{
-    background-color: #f4f4f4;
+    background-color: #290808;
     height: 50px;
 }
 nav.home_nav ul{
@@ -21,7 +21,7 @@ nav.home_nav ul{
 nav.home_nav ul li {
     height: 100%;
     line-height :50px;
-    color: gray;
+    color: #715a5a;
     line-height: 50px;
     min-width: 90px;
     text-align: center;
@@ -38,7 +38,7 @@ nav.home_nav ul li.brand {
 
 nav.home_nav ul li:hover {
     cursor: pointer;
-    background: #e5e5e5;
+    background: #390b0b;
 }
 
 
@@ -52,9 +52,9 @@ nav.home_nav ul li:hover ul.branch{
     flex-direction: column;
     height: 150px;
     width: 200px;
-    border: 1px solid #e3e3e3;
-    box-shadow: 0px 10px 10px -5px #494949;
-    background-color: #f4f4f4;
+    
+    box-shadow: 0px 5px 10px -5px #250000;
+    background-color: #290808;
 }
 .home_bg{
     background-image: url('/assets/images/code_bg.jpg');
@@ -92,7 +92,7 @@ div.home_title{
     position: absolute;
     left: 20%;
     top: 50px;
-    color: gray;
+    color: #aeaeae;
 }
 .home_bg .home_title h1 {
     
@@ -110,18 +110,18 @@ div.home_title{
 .info_data{
     padding: 30px;
     background: #FFF;
-    box-shadow: 0px 0px 10px 0px #dbdbdb;
+    box-shadow: 0px 10px 10px -10px #dbdbdb;
     text-align: left
     
 }
 .info_data .info{
     display: inline-block;
-    width: 100px;
+    width: 80px;
     color: gray;
 }
 
 h1 {
-    color: gray;
+    color: #9c7b7b;
     margin: 40px;
     font-family: 'Lato', sans-serif;
     font-weight: bold !important;
