@@ -1,14 +1,34 @@
-<div class="container" id="contact_me">
+<div class="contact_me" id="contact_me">
 
   <div class="col-md-8 offset-md-2">
     <br>
     <h1>Contact me</h1>
 
 
+    <ng-template [ngIf]="not_submited">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Something wrong! </strong>please try again later!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </ng-template>
+
+    <ng-template [ngIf]="submited">
+    </ng-template>
+
+    <ng-template [ngIf]="submited">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>your message has been sent</strong> we will be sure to answer it as soon as possible.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </ng-template>
+
+
 
     <form  (ngSubmit)="onSubmit(contact)" #contact="ngForm">
-        
-      
         <div class="form-group">
         <label for="email">Email address</label>
         <input #email=ngModel [(ngModel)]="contact.email" name="email" required type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">

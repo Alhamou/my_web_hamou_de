@@ -15,6 +15,7 @@ import { environment } from 'src/environments/environment';
 import { ContactComponent } from './contact/contact.component';
 
 import { RECAPTCHA_LANGUAGE } from 'ng-recaptcha';
+import { ExperiencesComponent } from './experiences/experiences.component';
 
 
 
@@ -25,6 +26,7 @@ import { RECAPTCHA_LANGUAGE } from 'ng-recaptcha';
     AppComponent,
     HomeComponent,
     ContactComponent,
+    ExperiencesComponent,
     
   ],
   imports: [

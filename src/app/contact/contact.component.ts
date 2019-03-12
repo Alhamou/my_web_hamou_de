@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Contact } from '../interfaces/contact';
 
@@ -9,14 +9,19 @@ import { Contact } from '../interfaces/contact';
 })
 export class ContactComponent {
 
+  @ViewChild('contact') formValues; // Added this
+  
   constructor( private db: AngularFirestore ) {}
 
   captcha = false;
+  not_submited = false;
+  submited = false;
 
 
   resolved(captchaResponse: string) {
     if (captchaResponse){
       this.captcha = true;
+      
     }
 }
 
@@ -25,6 +30,13 @@ export class ContactComponent {
     data.value.data = new Date();
     if (this.captcha === true){
       this.addItem(data.value);
+      this.submitForm();
+      grecaptcha.reset();
+      this.submited = true;
+      this.not_submited = false;
+    } else {
+      this.not_submited = true;
+      this.submited = false;
     }
   }
 
@@ -35,4 +47,10 @@ export class ContactComponent {
   submition(){
     console.log('cc');
   }
+
+  submitForm() {
+    this.formValues.reset();
+  }
+
+
 }

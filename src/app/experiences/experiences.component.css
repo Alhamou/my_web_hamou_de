@@ -1,0 +1,23 @@
+h1 {
+    color: gray;
+    margin: 40px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold !important;
+    text-align: center
+}
+.skills_ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+.skills_ul li{
+    padding: 10px;
+    background: #eaeaea;
+    margin: 10px;
+    color: #7d7d7d;
+    border-radius: 10px;
+    
+}
