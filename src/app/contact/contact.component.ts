@@ -34,6 +34,7 @@ export class ContactComponent {
       grecaptcha.reset();
       this.submited = true;
       this.not_submited = false;
+      this.captcha = false;
     } else {
       this.not_submited = true;
       this.submited = false;
